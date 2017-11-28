@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Jquery Function</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#attrb").click(function(){
+					$("#shrek").attr({width: "100px", height: "100px"});
+				});// the attribute changes html elements attributes, meaning a ref with height and width
+			$(".valb").click(function(){
+					var text =$(this).text();
+					$("input").val( text);
+				});
+			
+			$("#datab").click(function(){
+					$("div").data("sup",{span:"spanshrek"});
+					$("span").text($("div").data("sup").span)
+				});
+
+
+
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container">
+            <div id="first-stage">
+            <h1>My JQuery basic assignment</h1>
+            <!-- <a href=""></a> -->
+
+      
+            </div>
+            <div id="second-stage">
+            	<button id="attrb" type="button">Attribute</button>
+            	<h2> .attr</h2>
+            	<img id="shrek" src="https://theplantnewspaper.com/wp-content/uploads/2016/08/shrek.jpg" alt="shrek foreever" height="200" width="200">
+            </div>
+            <div id="third-stage">
+            	<button type="button">value</button>
+            	<h3> .val</h3>
+            	<button class="valb" type="button">valued</button>
+            	<button class="valb" type="button">cool shrek</button>
+            	<button class="valb" type="button">doneky</button>
+
+            	<input type="text" value="click a button">
+            </div>
+            
+            
+            <div id="fourth-stage">
+            	<button id="datab" type="button">data</button>
+            	<h4> data</h4>
+            	<span></span>
+            	
+            </div>
+        </div>
+
+	</body>
+</html>
